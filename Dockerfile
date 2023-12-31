@@ -1,18 +1,7 @@
-FROM python:3.10-slim-buster
-
-# Set the working directory
-WORKDIR /project
-
-# Install Git
-RUN apt-get update && apt-get install -y git
-
-# Clone the repository
-RUN git clone https://github.com/tracebackerror/smart_health_monitoring_management_system /project
-
-# Install project dependencies and migrations
-RUN pip install -r requirements.txt
-RUN python manage.py makemigrations
-RUN python manage.py migrate
-
-# Run the applicatio
-CMD python manage.py runserver 0.0.0.0:8000
+FROM python:latest
+WORKDIR /application
+COPY . /application
+RUN pip install -r requirments.txt
+COPY . .
+EXPOSE 9001
+CMD ["python3","manage.py","runserver","0.0.0.0:9001"]
