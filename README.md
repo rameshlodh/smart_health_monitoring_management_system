@@ -2,11 +2,11 @@
 
 ## How to Run
 
-**1. Pull the Docker Image from Cloud**
+**1.Build**
 <br>
-`docker pull tracebackerror/smart_health_monitoring_management_system:latest`
+`docker-compose build --no-cache`
 
 
 **2. Run the Container**
 <br>
-`docker run -d -p 8000:8000 tracebackerror/smart_health_monitoring_management_system`
+`docker-compose up -d`
