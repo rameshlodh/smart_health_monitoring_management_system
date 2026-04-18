@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: smart-health-container
-          image: rameshlodh/smart-health-monitoring-app:6f7d33d4074fd766556cc4264c666aee327e09a4
+          image: rameshlodh/smart-health-monitoring-app:608f0d3d91eb1f67d55f27f77fc93680a049ac80
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9001
